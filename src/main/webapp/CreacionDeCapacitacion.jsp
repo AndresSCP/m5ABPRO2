@@ -1,3 +1,8 @@
+<%
+if (session.getAttribute("username") == null) {
+    response.sendRedirect("login.jsp");
+}
+%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -11,6 +16,7 @@
 <link rel="stylesheet" href="css/Style.css">
 <%@include file = "extras/Navbar.jsp" %>
 	<body style="background-color: LemonChiffon;">
+
 	<div class="container">
 		<h1 class="text-center">Creacion de capacitacion</h1>
 		<form action="index.jsp" method="post">

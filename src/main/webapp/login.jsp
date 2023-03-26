@@ -13,20 +13,21 @@
 <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
+
 	<div class="conteiner-fluid">
 		<div class="row">
 			<div class="col-12 d-flex justify-content-center">
 
 				<form class="mx-auto pt-5" action="Login" method="POST">
 					<div class="mb-3">
-						<label for="imputUsuario" class="form-label">Usuario</label>
-						<input type="text" class="form-control" id="imputUsuario" name="imputUsuario"
-							aria-describedby="Help">
+						<label for="imputUsuario" class="form-label">Usuario</label> 
+						<input	type="text" class="form-control" id="inputUsuario" name="inputUsuario" aria-describedby="Help">
 						<div id="Help" class="form-text"></div>
 					</div>
 					<div class="mb-3">
-						<label for="password" class="form-label">Contraseña</label>
-						<input type="password" class="form-control" name="password" id="password">
+						<label for="password" class="form-label">Contraseña</label> <input
+							type="password" class="form-control" name="password"
+							id="password">
 					</div>
 					<div class="mb-3 form-check">
 						<input type="checkbox" class="form-check-input" id="remember">

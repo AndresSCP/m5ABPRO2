@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-secondary">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.jsp">Inicio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="formContacto.jsp">Contacto</a>
-        </li>       
+        </li>
+         <li class="nav-item">
+          
+        </li>       <li class="nav-item">
+          <a class="nav-link" href="ListarCapServlet">Lista de Capacitaciones</a>
+        </li>             
       </ul>      
     </div>
   </div>

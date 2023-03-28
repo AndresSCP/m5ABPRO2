@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
+<h1 class="text-center">Inicio de sesión</h1>
 
 	<div class="conteiner-fluid">
 		<div class="row">
@@ -20,8 +21,9 @@
 
 				<form class="mx-auto pt-5" action="Login" method="POST">
 					<div class="mb-3">
-						<label for="imputUsuario" class="form-label">Usuario</label> 
-						<input	type="text" class="form-control" id="inputUsuario" name="inputUsuario" aria-describedby="Help">
+						<label for="imputUsuario" class="form-label">Usuario</label> <input
+							type="text" class="form-control" id="inputUsuario"
+							name="inputUsuario" aria-describedby="Help">
 						<div id="Help" class="form-text"></div>
 					</div>
 					<div class="mb-3">
@@ -38,6 +40,24 @@
 			</div>
 		</div>
 	</div>
+	<br>
+	<%
+	if (request.getAttribute("mensajeError") != null) {
+	%>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-3">
+				<div class="alert alert-danger text-center" role="alert">
+					<%=request.getAttribute("mensajeError")%>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%
+	}
+	%>
+	
+	<%@include file="extras/footer.jsp"%>
 	<script
 		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
 		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -47,4 +67,5 @@
 		integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
 		crossorigin="anonymous"></script>
 </body>
+
 </html>

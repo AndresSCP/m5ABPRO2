@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.PrintWriter;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Inicio
@@ -16,7 +16,7 @@ import java.io.PrintWriter;
 @WebServlet("/Inicio")
 public class SvInicio extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -28,20 +28,28 @@ public class SvInicio extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-//		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-//		dispatcher.forward(request, response);
-//		PrintWriter out = response.getWriter();		
-        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-        //redirigir la solicitud a la pagina JSP
-        dispatcher.forward(request, response);
 		
+		// Obtener la sesión actual
+        HttpSession session = request.getSession();
+        // Obtener un atributo de sesión
+        String username = (String) session.getAttribute("username");
+
+        //Verificar que la session este activa
+        if (session.getAttribute("username") != null) {
+        	// Llamamos a la página JSP del formulario de contacto
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+        }else{
+        	//Se redirige la pagina a login
+        	request.getRequestDispatcher("login.jsp").forward(request, response);
+        }
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);

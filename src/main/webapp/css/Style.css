@@ -1,18 +1,26 @@
 @charset "ISO-8859-1";
 
-  h2 {
-    text-shadow: 2px 2px 5px black;
-    font-style: italic;
-  }
+h2 {
+	text-shadow: 2px 2px 5px black;
+	font-style: italic;
+}
 
-  .col-md-6:first-of-type {
-    background-color: grey;
-    color: white;
-  }
-  
-  .col-md-6:last-of-type {
-    background-color: black;
-    color: white;
-  }
-  
-  
+#quienesSomos {
+	background-color: grey;
+	color: white;
+}
+
+#parrafo1{
+	background-color: black;
+	color: white;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#lista{
+		background-color: #f9f9f9;
+}
